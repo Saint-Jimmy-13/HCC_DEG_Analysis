@@ -1,0 +1,7 @@
+data/
+results/tables/
+report/*.docx
+.Rhistory
+.Rproj.user
+HCC_Project.Rproj
+
