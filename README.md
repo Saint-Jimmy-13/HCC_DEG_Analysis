@@ -1,6 +1,6 @@
 # HCC Gene Expression Data Analysis
 
-This repository contains a complete gene expression analysis pipeline for hepatocellular carcinoma (HCC), based on the GEO dataset **GSE22058**. The aim of the project is to identify differentially expressed genes between liver tumor samples and adjacent non-tumor liver tissues, and to functionally characterize the results using pathway and miRNA-target enrichment analysis.
+This repository contains a complete gene expression analysis pipeline for hepatocellular carcinoma (HCC), based on the GEO dataset **GSE22058**. The aim is to identify differentially expressed genes between liver tumor samples and adjacent non-tumor liver tissues, and to functionally characterize the results using pathway and miRNA-target enrichment analysis.
 
 ## Project Aim
 
@@ -12,11 +12,9 @@ The main objectives are:
 - visualize the DEG expression profile;
 - perform functional enrichment analysis;
 - perform miRNA-target enrichment analysis using MIENTURNET;
-- interpret the biological meaning of the results.
+- interpret the biological meaning of the results using pathway analysis and literature validation.
 
 ## Analysis Pipeline
-
-The project is organized into five R scripts:
 
 | Script | Description |
 |---|---|
@@ -74,6 +72,19 @@ DOWN-regulated genes were mainly enriched for:
 - immune/inflammatory pathways.
 
 Overall, the results suggest that HCC tumor tissue activates proliferative cell-cycle programs while losing part of the normal liver metabolic and detoxification phenotype.
+
+## Additional Analysis and Literature-Based Validation
+
+Additional investigation was performed by integrating the DEG visualizations, representative gene boxplots, functional enrichment results, and MIENTURNET miRNA-target enrichment.
+
+Selected findings were compared with previous HCC/cancer literature:
+
+- **ZIC2**, the top UP-regulated gene, has been reported as a prognostic and immune-response marker in liver cancer/HCC.
+- **CLEC1B**, the top DOWN-regulated gene, has been reported as an HCC prognostic biomarker related to immune infiltration.
+- The down-regulation of **cytochrome P450** and drug-metabolism genes is consistent with published evidence of impaired or deregulated CYP expression/activity in HCC.
+- The MIENTURNET findings are biologically plausible: **miR-146a** is linked to inflammatory Toll-like receptor/NF-kB signaling, while **miR-34a** is linked to p53, cell-cycle arrest, DNA-damage response, and apoptosis.
+
+These observations support the biological plausibility of the computational results, although they remain hypothesis-generating and would require independent validation.
 
 ## miRNA-Target Enrichment
 
@@ -161,4 +172,4 @@ The pipeline generates:
 
 ## Conclusion
 
-This project identifies a coherent HCC gene expression signature characterized by increased proliferation-related gene expression in tumor tissue and reduced expression of normal liver metabolic and detoxification genes. Functional enrichment and miRNA-target enrichment provide additional biological interpretation of the DEG signature.
+This project identifies a coherent HCC gene expression signature characterized by increased proliferation-related gene expression in tumor tissue and reduced expression of normal liver metabolic and detoxification genes. Functional enrichment, miRNA-target enrichment, and literature validation provide additional biological interpretation of the DEG signature.
