@@ -1,6 +1,7 @@
 data/
 results/tables/
 report/*.docx
+report/*.pptx
 .Rhistory
 .Rproj.user
 HCC_Project.Rproj
